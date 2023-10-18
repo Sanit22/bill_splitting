@@ -16,6 +16,10 @@ const expenseSchema = mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId, 
             ref: 'User' 
         }, 
-        paidShare: Number 
+        paidShare: Number,
+        owes : Number,
+        owed: Number 
     }],
 });
+
+module.exports = mongoose.model('Expense', expenseSchema)

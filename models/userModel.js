@@ -12,7 +12,8 @@ const userSchema = mongoose.Schema({
     password:{
         type: String,
         required:[true, 'Password is required!']
-    }
+    },
+    balance: Number
 })
 
 module.exports = mongoose.model('User', userSchema)
