@@ -12,23 +12,7 @@ const userSchema = mongoose.Schema({
     password:{
         type: String,
         required:[true, 'Password is required!']
-    },
-    groups:{
-        type: [mongoose.Schema.Types.ObjectId],
-        ref: 'Group'
-    },
-    owe_to_others:{
-        type: Number
-    },
-    owed_to_you:{
-        type: Number
-    },
-    balance_with_friends:{
-        balance: {
-            id: mongoose.Schema.Types.ObjectId,
-            balance: Number 
-        }
     }
 })
 
-module.exports = mongoose.model('userSchema', userSchema)
+module.exports = mongoose.model('User', userSchema)
